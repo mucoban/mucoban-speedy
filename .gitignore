@@ -7,6 +7,7 @@
 dist
 db-data
 backend/public
+frontend/node-compile-cache
 
 # Node dependencies
 node_modules
