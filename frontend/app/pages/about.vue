@@ -1,30 +1,23 @@
 <template>
-    <div class="about-container">
-        <div class="content-wrapper">
-            <div class="text-section">
-                <h1>Text Bölümü Başlığı</h1>
-                <p class="description">Açıklama metni burada yer alacak.</p>
-                <button>Daha Fazla</button>
+    <div class="container">
+        <div class="row">
+            <div class="col py-3">
+                <div class="text-section">
+                    <h1>Text Bölümü Başlığı</h1>
+                    <p class="description">Açıklama metni burada yer alacak.</p>
+                    <button>Daha Fazla</button>
+                </div>
             </div>
-            <div class="image-section">
-                <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/p1-img-01.png" alt="Travel Photo" class="feature-image">
+            <div class="col py-5">
+                <div class="image-section">
+                    <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/p1-img-01.png" alt="Travel Photo" class="feature-image" />
+                </div>
             </div>
         </div>
     </div>
 </template>
+
 <style lang="scss">
-    .about-container {
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .content-wrapper {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-    }
-
     .text-section {
         flex: 1;
         padding: 2rem;
