@@ -1,8 +1,17 @@
 <template>
     <div class="homep-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <SwiperHolder />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="homep-section">
         <div class="container">
             <div class="row">
-                <div class="co-12 text-center p-5">   
+                <div class="col-12 text-center p-5">   
                     <div class="small-hl">Lorem ipsum dolor</div>
                     <div class="medium-hl">Travel essentials tips</div>
                 </div>

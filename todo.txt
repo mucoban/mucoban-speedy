@@ -1,3 +1,11 @@
 
+Todo:
+    - Correct home page slider
+    - Font change
+
+
+
+
 backedn run:
 node --env-file=.env server.js
+
