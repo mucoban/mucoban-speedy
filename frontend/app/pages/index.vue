@@ -1,12 +1,12 @@
 <template>
-    <div class="homep-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <SwiperHolder />
-                </div>
-            </div>
-        </div>
+    <div class="main-swiper-section">
+        <SwiperHolder
+            :slides="[
+                { title: 'slide 1', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide1-bckg.jpg' },
+                { title: 'slide 2', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide2-bckg.jpg'},
+                { title: 'slide 3', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide3-bckg.jpg'},
+            ]"
+            />
     </div>
     <div class="homep-section">
         <div class="container">
@@ -61,6 +61,10 @@
     .medium-hl {
         color: #000;
         font-size: 35px;
+    }
+
+    .main-swiper-section {
+        height: calc(100vh - 64px);
     }
 
 </style>

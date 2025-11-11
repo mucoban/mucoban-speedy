@@ -1,10 +1,6 @@
 <template>
-  <swiper :navigation="true" :modules="modules" class="mySwiper">
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+  <swiper v-if="slides?.length" :navigation="true" :modules="modules">
+    <swiper-slide v-for="{ title, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">{{ title }}</swiper-slide>
   </swiper>
 </template>
 <script>
@@ -15,7 +11,6 @@
   import 'swiper/css';
   import 'swiper/css/navigation';
 
-
   // import required modules
   import { Navigation } from 'swiper/modules';
 
@@ -24,6 +19,14 @@
       Swiper,
       SwiperSlide,
     },
+    props: {
+      slides: [
+        { 
+          title: String,
+          image: String
+        }
+      ]
+    },
     setup() {
       return {
         modules: [Navigation],
@@ -31,3 +34,15 @@
     },
   };
 </script>
+
+<style lang="scss">
+  .swiper { height: 100%; }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+  }
+</style>
