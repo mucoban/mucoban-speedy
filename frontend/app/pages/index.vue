@@ -2,9 +2,9 @@
     <div class="main-swiper-section">
         <SwiperHolder
             :slides="[
-                { title: 'slide 1', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide1-bckg.jpg' },
-                { title: 'slide 2', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide2-bckg.jpg'},
-                { title: 'slide 3', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide3-bckg.jpg'},
+                { hl1: 'slide 1', hl2:'Slide 2', btn: { text: 'Buton', link: '#' }, image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide1-bckg.jpg' },
+                { hl1: 'slide 2', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide2-bckg.jpg'},
+                { hl1: 'slide 3', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide3-bckg.jpg'},
             ]"
             />
     </div>

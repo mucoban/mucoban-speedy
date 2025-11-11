@@ -1,6 +1,13 @@
 <template>
   <swiper v-if="slides?.length" :navigation="true" :modules="modules">
-    <swiper-slide v-for="{ title, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">{{ title }}</swiper-slide>
+    <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
+      <div class="info-box">
+        <div class="hl1">{{ hl1 }}</div>
+        <div class="hl2">{{ hl2 }}</div>
+        <p class="desc">{{ desc }}</p>
+        <div class="btn-holder"><button>{{ btn?.text }}</button></div>
+      </div>
+    </swiper-slide> 
   </swiper>
 </template>
 <script>
@@ -22,7 +29,10 @@
     props: {
       slides: [
         { 
-          title: String,
+          hl1: String,
+          hl2: String,
+          desc: String,
+          btn: { text: String, link: String },
           image: String
         }
       ]
@@ -44,5 +54,47 @@
     justify-content: center;
     background-size: cover;
     background-position: center center;
+  }
+
+  .info-box {
+    padding: 2rem;
+    text-align: center;
+    max-width: 400px;
+
+    .hl1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .hl2 {
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .desc {
+      font-size: 1rem;
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-holder {
+      button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darkgreen;
+          transform: translateY(-2px);
+        }
+      }
+    }
   }
 </style>
