@@ -2,10 +2,17 @@
   <swiper v-if="slides?.length" :navigation="true" :modules="modules">
     <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
       <div class="info-box">
-        <div class="hl1">{{ hl1 }}</div>
-        <div class="hl2">{{ hl2 }}</div>
-        <p class="desc">{{ desc }}</p>
-        <div class="btn-holder"><button>{{ btn?.text }}</button></div>
+        <div v-if="hl1" class="hl1">{{ hl1 }}</div>
+        <div v-if="hl2" class="hl2">{{ hl2 }}</div>
+        <p v-if="desc" class="desc">{{ desc }}</p>
+        <div v-if="btn"  class="btn-holder">
+          <a class="btn"
+            :href="btn?.link"
+            :style="{
+              backgroundColor: btn?.bgColor, 
+              color: btn?.color 
+            }">{{ btn?.text }}</a>
+        </div>
       </div>
     </swiper-slide> 
   </swiper>
@@ -32,7 +39,7 @@
           hl1: String,
           hl2: String,
           desc: String,
-          btn: { text: String, link: String },
+          btn: { text: String, bgColor: String, link: String },
           image: String
         }
       ]
