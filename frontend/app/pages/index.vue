@@ -1,6 +1,10 @@
 <template>
     <div class="main-swiper-section">
         <SwiperHolder
+            :params="{ 
+                speed: 1000,
+                loop: true
+             }"
             :slides="[
                 { 
                     hl1: 'slide 1', 

@@ -1,20 +1,26 @@
 <template>
-  <swiper v-if="slides?.length" :navigation="true" :modules="modules">
-    <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
-      <div class="info-box">
-        <div v-if="hl1" class="hl1">{{ hl1 }}</div>
-        <div v-if="hl2" class="hl2">{{ hl2 }}</div>
-        <p v-if="desc" class="desc">{{ desc }}</p>
-        <div v-if="btn"  class="btn-holder">
-          <a class="btn"
-            :href="btn?.link"
-            :style="{
-              backgroundColor: btn?.bgColor, 
-              color: btn?.color 
-            }">{{ btn?.text }}</a>
+  <swiper 
+    v-if="slides?.length" 
+    :navigation="true" 
+    :modules="modules"
+    :speed="params?.speed"
+    :loop="params?.loop"
+    @swiper="onSwiper">
+      <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
+        <div class="info-box">
+          <div v-if="hl1" class="hl1">{{ hl1 }}</div>
+          <div v-if="hl2" class="hl2">{{ hl2 }}</div>
+          <p v-if="desc" class="desc">{{ desc }}</p>
+          <div v-if="btn"  class="btn-holder">
+            <a class="btn"
+              :href="btn?.link"
+              :style="{
+                backgroundColor: btn?.bgColor, 
+                color: btn?.color 
+              }">{{ btn?.text }}</a>
+          </div>
         </div>
-      </div>
-    </swiper-slide> 
+      </swiper-slide> 
   </swiper>
 </template>
 <script>
@@ -34,6 +40,7 @@
       SwiperSlide,
     },
     props: {
+      params: {},
       slides: [
         { 
           hl1: String,
@@ -45,7 +52,14 @@
       ]
     },
     setup() {
+
+      const onSwiper = (swiper) => {
+        console.log('abc swiper', swiper);
+        swiper.set
+      };
+
       return {
+        onSwiper,
         modules: [Navigation],
       };
     },
