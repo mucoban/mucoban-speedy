@@ -1,27 +1,36 @@
 <template>
-  <swiper 
-    v-if="slides?.length" 
-    :navigation="true" 
-    :modules="modules"
-    :speed="params?.speed"
-    :loop="params?.loop"
-    @swiper="onSwiper">
-      <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
-        <div class="info-box">
-          <div v-if="hl1" class="hl1">{{ hl1 }}</div>
-          <div v-if="hl2" class="hl2">{{ hl2 }}</div>
-          <p v-if="desc" class="desc">{{ desc }}</p>
-          <div v-if="btn"  class="btn-holder">
-            <a class="btn"
-              :href="btn?.link"
-              :style="{
-                backgroundColor: btn?.bgColor, 
-                color: btn?.color 
-              }">{{ btn?.text }}</a>
+  <div class="swiper-main-holder">
+    <swiper 
+      v-if="slides?.length" 
+      :modules="modules"
+      :speed="params?.speed"
+      :loop="params?.loop"
+      @swiper="onSwiper">
+        <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
+          <div class="info-box">
+            <div v-if="hl1" class="hl1">{{ hl1 }}</div>
+            <div v-if="hl2" class="hl2">{{ hl2 }}</div>
+            <p v-if="desc" class="desc">{{ desc }}</p>
+            <div v-if="btn"  class="btn-holder">
+              <a class="btn"
+                :href="btn?.link"
+                :style="{
+                  backgroundColor: btn?.bgColor, 
+                  color: btn?.color 
+                }">{{ btn?.text }}</a>
+            </div>
           </div>
-        </div>
-      </swiper-slide> 
-  </swiper>
+        </swiper-slide>
+    </swiper>
+    <div class="swiper-custom-nav-holder">
+      <button class="swiper-custom-nav prev" @click="swiper.slidePrev()">
+        &#8592;
+      </button>
+      <button class="swiper-custom-nav next" @click="swiper.slideNext()">
+        &#8594;
+      </button>
+    </div>
+  </div>
 </template>
 <script>
   // Import Swiper Vue.js components
@@ -30,10 +39,6 @@
   // Import Swiper styles
   import 'swiper/css';
   import 'swiper/css/navigation';
-
-  // import required modules
-  import { Navigation } from 'swiper/modules';
-
   export default {
     components: {
       Swiper,
@@ -52,21 +57,28 @@
       ]
     },
     setup() {
-
-      const onSwiper = (swiper) => {
-        console.log('abc swiper', swiper);
-        swiper.set
+      
+      const swiper = ref();
+      const onSwiper = (createdSwiper) => {
+        swiper.value = createdSwiper; 
       };
 
       return {
+        swiper,
         onSwiper,
-        modules: [Navigation],
       };
     },
   };
 </script>
 
 <style lang="scss">
+
+  .swiper-main-holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
   .swiper { height: 100%; }
 
   .swiper-slide {
@@ -117,5 +129,24 @@
         }
       }
     }
+  }
+
+  .swiper-custom-nav-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+
+  .swiper-custom-nav {
+    border: none;
+    background: #ffffff;
+    color: #4c4848;
   }
 </style>
