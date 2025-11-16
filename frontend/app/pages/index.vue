@@ -4,7 +4,8 @@
             :params="{ 
                 speed: 1000,
                 loop: true,
-                pagination: { clickable: true }
+                pagination: { clickable: true },
+                customNavigation: true
              }"
             :slides="[
                 { 
@@ -50,6 +51,41 @@
                     </div>
                 </div>
                 
+            </div>
+            
+        </div>
+    </div>
+    <div class="homep-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center p-5">   
+                    <div class="small-hl">Brands</div>
+                </div>
+                <div class="col-12">
+                    <SwiperHolder
+                        :params="{ 
+                            speed: 1000,
+                            loop: true,
+                            slidesPerView: 7,
+                            spaceBetween: 30,
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true
+                            }
+                        }"
+                        :slides="[
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-01-hover.png'},
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                        ]"
+                        />
+                </div>
             </div>
             
         </div>

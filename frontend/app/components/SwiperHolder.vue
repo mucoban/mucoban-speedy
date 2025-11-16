@@ -6,6 +6,9 @@
       :speed="params?.speed"
       :loop="params?.loop"
       :pagination="params?.pagination"
+      :slidesPerView="params?.slidesPerView"
+      :spaceBetween="params?.spaceBetween"
+      :autoplay="params?.autoplay"
       @swiper="onSwiper">
         <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
           <div class="info-box">
@@ -23,7 +26,7 @@
           </div>
         </swiper-slide>
     </swiper>
-    <div class="swiper-custom-nav-holder">
+    <div class="swiper-custom-nav-holder" v-if="params?.customNavigation">
       <button class="swiper-custom-nav prev" @click="swiper.slidePrev()">
         &#8592;
       </button>
@@ -40,7 +43,7 @@
   // Import Swiper styles
   import 'swiper/css';
   import 'swiper/css/pagination';
-  import { Pagination } from 'swiper/modules';
+  import { Pagination, Autoplay } from 'swiper/modules';
 
   export default {
     components: {
@@ -69,7 +72,7 @@
       return {
         swiper,
         onSwiper,
-        modules: [Pagination],
+        modules: [Pagination, Autoplay],
       };
     },
   };
