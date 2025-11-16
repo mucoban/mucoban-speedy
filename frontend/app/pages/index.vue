@@ -3,7 +3,8 @@
         <SwiperHolder
             :params="{ 
                 speed: 1000,
-                loop: true
+                loop: true,
+                pagination: { clickable: true }
              }"
             :slides="[
                 { 

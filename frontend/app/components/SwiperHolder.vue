@@ -5,6 +5,7 @@
       :modules="modules"
       :speed="params?.speed"
       :loop="params?.loop"
+      :pagination="params?.pagination"
       @swiper="onSwiper">
         <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
           <div class="info-box">
@@ -38,7 +39,9 @@
 
   // Import Swiper styles
   import 'swiper/css';
-  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+  import { Pagination } from 'swiper/modules';
+
   export default {
     components: {
       Swiper,
@@ -66,6 +69,7 @@
       return {
         swiper,
         onSwiper,
+        modules: [Pagination],
       };
     },
   };
@@ -142,11 +146,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    pointer-events: none;
   }
 
   .swiper-custom-nav {
     border: none;
     background: #ffffff;
     color: #4c4848;
+    pointer-events: all;
   }
 </style>
