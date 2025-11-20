@@ -157,5 +157,13 @@
     background: #ffffff;
     color: #4c4848;
     pointer-events: all;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+
+    &:hover {
+      background-color: #4c4848;
+      color: #ffffff;
+    }
   }
 </style>
