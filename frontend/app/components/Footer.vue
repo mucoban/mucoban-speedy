@@ -76,21 +76,6 @@
             padding: 20px;
         }
 
-        .socials {
-            .text { margin-right: 5px; }
-
-            .slink {
-                color: #ddd; 
-                margin-right: 5px;
-            }
-        }
-
-        .remark {
-            font-style: italic;
-            color: #aaa; 
-            margin-bottom: 46px;
-        }
-
         .bottom-logo {
             display: inline-block;
             margin-bottom: 20px;
@@ -124,6 +109,13 @@
                     text-decoration: none;
                 }
             }
+        }
+
+
+        .remark {
+            font-style: italic;
+            color: #aaa; 
+            margin-bottom: 46px;
         }
     }
 </style>
