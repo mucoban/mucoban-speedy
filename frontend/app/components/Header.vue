@@ -3,7 +3,11 @@
         <div class="up-line">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
+                    <div class="col text-start">
+                        <a class="contact-btn">+123 45677 789</a>
+                        <a class="contact-btn">wanderland@qodeinteractive.com</a>
+                    </div>
+                    <div class="col text-end">
                         <div class="socials">
                             <span class="text">
                                 Socials
@@ -15,10 +19,6 @@
                                 <a href="./" class="slink">y</a>
                             </span>
                         </div>
-                    </div>
-                    <div class="col text-end">
-                        <a class="contact-btn">+123 45677 789</a>
-                        <a class="contact-btn">wanderland@qodeinteractive.com</a>
                     </div>
                 </div>
             </div>
