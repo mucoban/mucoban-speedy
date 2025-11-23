@@ -12,26 +12,30 @@
       @swiper="onSwiper">
         <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
           <div class="info-box">
-            <div v-if="hl1" class="hl1">{{ hl1 }}</div>
-            <div v-if="hl2" class="hl2">{{ hl2 }}</div>
-            <p v-if="desc" class="desc">{{ desc }}</p>
-            <div v-if="btn"  class="btn-holder">
-              <a class="btn"
-                :href="btn?.link"
-                :style="{
-                  backgroundColor: btn?.bgColor, 
-                  color: btn?.color 
-                }">{{ btn?.text }}</a>
+            <div class="holder">
+              <div v-if="hl1" class="hl1">{{ hl1 }}</div>
+              <div v-if="hl2" class="hl2">{{ hl2 }}</div>
+              <p v-if="desc" class="desc">{{ desc }}</p>
+              <div v-if="btn"  class="btn-holder">
+                <a class="btn"
+                  :href="btn?.link"
+                  :style="{
+                    backgroundColor: btn?.bgColor, 
+                    color: btn?.color 
+                  }">{{ btn?.text }}</a>
+              </div>
             </div>
           </div>
         </swiper-slide>
     </swiper>
     <div class="swiper-custom-nav-holder" v-if="params?.customNavigation">
       <button class="swiper-custom-nav prev" @click="swiper.slidePrev()">
-        &#8592;
+        <SvgBgA class="bg" />
+        <i class="bi bi-arrow-left arrow left"></i>
       </button>
       <button class="swiper-custom-nav next" @click="swiper.slideNext()">
-        &#8594;
+        <SvgBgA class="bg" />
+        <i class="bi bi-arrow-right arrow right"></i>
       </button>
     </div>
   </div>
@@ -97,9 +101,16 @@
   }
 
   .info-box {
-    padding: 2rem;
-    text-align: center;
-    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .holder {
+      padding: 2rem;
+      text-align: center;
+    }
 
     .hl1 {
       font-size: 2rem;
@@ -154,16 +165,36 @@
 
   .swiper-custom-nav {
     border: none;
-    background: #ffffff;
+    background: transparent;
     color: #4c4848;
     pointer-events: all;
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 0.8;
+    position: relative;
+    width: 65px;
+    padding: 0px;
 
     &:hover {
-      background-color: #4c4848;
-      color: #ffffff;
+      .bg {
+        fill: green;
+      }
+      .arrow {
+        color: white;
+      }
     }
+
+    .bg {
+      fill: white;
+      transition: all .3s;
+    }
+
+    .arrow {
+      position: absolute;
+      left: 17px; top: 5px;
+      font-size: 24px;
+      color: #333;
+    }
+
   }
 </style>
