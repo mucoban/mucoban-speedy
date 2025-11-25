@@ -20,9 +20,9 @@
                 <a class="btn"
                   :href="btn?.link"
                   :style="{
-                    backgroundColor: btn?.bgColor, 
+                    backgroundColor: btn?.bgColor || null, 
                     color: btn?.color 
-                  }">{{ btn?.text }}</a>
+                  }">{{ btn?.text }} <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -113,16 +113,19 @@
     }
 
     .hl1 {
-      font-size: 2rem;
+      font-size: 55px;
       font-weight: bold;
       color: white;
       margin-bottom: 1rem;
     }
 
     .hl2 {
-      font-size: 1.5rem;
+      font-size: 18px;
+      font-weight: 300;
       color: white;
       margin-bottom: 1rem;
+      max-width: 500px;
+      display: inline-block;
     }
 
     .desc {
@@ -132,12 +135,12 @@
     }
 
     .btn-holder {
-      button {
-        background-color: green;
+      .btn {
+        background-color: #59815c;
         color: white;
         border: none;
         padding: 0.75rem 1.5rem;
-        cursor: pointer;
+        cursor: pointer !important;
         font-weight: bold;
         transition: all 0.3s ease;
 

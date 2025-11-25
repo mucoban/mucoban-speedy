@@ -9,9 +9,9 @@
              }"
             :slides="[
                 { 
-                    hl1: 'slide 1', 
-                    hl2:'Slide 2', 
-                    btn: { text: 'About', bgColor: 'green', color: 'white', link: './about' },
+                    hl1: 'LOREM IPSUM DOLOR SIT AMET', 
+                    hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
+                    btn: { text: 'READ MORE', color: 'white', link: './about' },
                     image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide1-bckg.jpg' 
                 },
                 { hl1: 'slide 2', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide2-bckg.jpg'},
