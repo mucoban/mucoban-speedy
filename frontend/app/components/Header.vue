@@ -13,10 +13,10 @@
                                 Socials
                             </span>
                             <span class="slinks">
-                                <a href="./" class="slink">f</a>
-                                <a href="./" class="slink">i</a>
-                                <a href="./" class="slink">t</a>
-                                <a href="./" class="slink">y</a>
+                                <a href="./" class="slink"><i class="bi bi-facebook"></i></a>
+                                <a href="./" class="slink"><i class="bi bi-instagram"></i></a>
+                                <a href="./" class="slink"><i class="bi bi-twitter"></i></a>
+                                <a href="./" class="slink"><i class="bi bi-youtube"></i></a>
                             </span>
                         </div>
                     </div>
@@ -75,7 +75,6 @@
             padding: 10px 10px;
             font-weight: 300;
             font-size: 14px;
-            font-style: italic;
 
             .socials {
                 .text { 
