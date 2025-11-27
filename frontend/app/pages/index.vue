@@ -19,18 +19,21 @@
             ]"
             />
     </div>
+    <div class="main-swiper-bottom-effect">
+        <img src="/img/ms-bottom-effect.png" />
+    </div>
     <div class="homep-section">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center p-5">   
                     <div class="small-hl">Lorem ipsum dolor</div>
-                    <div class="medium-hl">Travel essentials tips</div>
+                    <div class="medium-hl">TRAVEL ESSENTIALS TIPS</div>
                 </div>
                 <div class="col-6  py-5">
-                    <div class="">
+                    <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
                         <div class="medium-hl">Travel essentials tips</div>
-                        <p class="">
+                        <p class="desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam 
                         </p>
                     </div>
@@ -42,10 +45,10 @@
                     <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-01.jpg" />
                 </div>
                 <div class="col-6 py-5">
-                    <div class="">
+                    <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
                         <div class="medium-hl">Travel essentials tips</div>
-                        <p class="">
+                        <p class="desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam 
                         </p>
                     </div>
@@ -100,17 +103,35 @@
     }
 
     .small-hl {
+        font-family: "Crimson Text", serif;
         color: #aaa;
-        font-size: 20px;
+        font-style: italic;
+        font-size: 21px;
     }
 
     .medium-hl {
-        color: #000;
-        font-size: 35px;
+        color: #222;
+        font-size: 50px;
+    }
+
+    .desc {
+        color: #666;
+        font-weight: 300;
+        max-width: 400px;
+    }
+
+    .text-box {
+        padding: 0 50px;
     }
 
     .main-swiper-section {
         height: calc(100vh - 0px);
+    }
+
+    .main-swiper-bottom-effect {
+        margin-top: -100px;
+        position: relative;
+        z-index: 1;
     }
 
 </style>
