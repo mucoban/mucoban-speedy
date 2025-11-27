@@ -32,7 +32,7 @@
                 <div class="col-6  py-5">
                     <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
-                        <div class="medium-hl">Travel essentials tips</div>
+                        <div class="medium-hl-2">TRAVEL ESSENTIALS TIPS</div>
                         <p class="desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam 
                         </p>
@@ -47,7 +47,7 @@
                 <div class="col-6 py-5">
                     <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
-                        <div class="medium-hl">Travel essentials tips</div>
+                        <div class="medium-hl-2">TRAVEL ESSENTIALS TIPS</div>
                         <p class="desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam 
                         </p>
@@ -112,6 +112,13 @@
     .medium-hl {
         color: #222;
         font-size: 50px;
+        font-weight: 500;
+    }
+   
+    .medium-hl-2 {
+        color: #222;
+        font-size: 30px;
+        font-weight: 500;
     }
 
     .desc {
