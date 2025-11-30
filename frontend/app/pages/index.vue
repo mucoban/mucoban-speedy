@@ -94,12 +94,55 @@
         </div>
     </div>
 
+    <div class="homep-section fragmented">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-img-01.png" />
+                </div>
+                <div class="col-6 py-5">
+                    <div class="text-box">
+                        <div class="small-hl ">Lorem ipsum dolor</div>
+                        <div class="medium-hl-2">TRAVEL ESSENTIALS TIPS</div>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam 
+                        </p>
+                        <div class="fast-contact-box">
+                            <div class="line-a">
+                                <input />
+                                <div class="gap-bettwen"></div>
+                                <input />
+                            </div>
+                            <div class="line-b">
+                                <textarea />
+                                <div class="gap-bettwen"></div>
+                                <button class="btn btn-primary cus">
+                                    Send
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 </template>
 
 <style lang="scss">
 
     .homep-section {
         margin: 30px 0;
+
+        &.fragmented {
+            background-image: url(/img/fragmented-bg.jpg) !important;
+            padding: 100px 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
 
     .small-hl {
@@ -125,6 +168,7 @@
         color: #666;
         font-weight: 300;
         max-width: 400px;
+        font-family: Muli,sans-serif;
     }
 
     .text-box {
@@ -139,6 +183,22 @@
         margin-top: -100px;
         position: relative;
         z-index: 1;
+    }
+
+    .fast-contact-box {
+        .line-a {
+            display: flex;
+            margin-bottom: 10px;
+            input { flex-grow: 1; }
+        }
+        .line-b {
+            display: flex;
+            textarea { flex-grow: 1; }
+        }
+        .gap-bettwen {
+            display: inline-block;
+            width: 20px;
+        }
     }
 
 </style>
