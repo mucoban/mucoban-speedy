@@ -129,6 +129,50 @@
         </div>
     </div>
 
+    <div class="homep-section icons">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="icon-box">
+                        <div class="icon-holder">
+                            <i class="bi bi-airplane-engines-fill"></i>
+                        </div>
+                        <div class="hl">Çok hızlı</div>
+                        <div class="hl-2">Anında açılır</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="icon-box">
+                        <div class="icon-holder">
+                            <i class="bi bi-arrows-angle-contract"></i>
+                        </div>
+                        <div class="hl">Çok hızlı</div>
+                        <div class="hl-2">Anında açılır</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="icon-box">
+                        <div class="icon-holder">
+                            <i class="bi bi-aspect-ratio"></i>
+                        </div>
+                        <div class="hl">Çok hızlı</div>
+                        <div class="hl-2">Anında açılır</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="icon-box">
+                        <div class="icon-holder">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div class="hl">Çok hızlı</div>
+                        <div class="hl-2">Anında açılır</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
 </template>
 
 <style lang="scss">
@@ -142,6 +186,10 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+        }
+
+        &.icons {
+            margin: 100px 0;
         }
     }
 
@@ -205,6 +253,36 @@
         .gap-bettwen {
             display: inline-block;
             width: 20px;
+        }
+    }
+
+    .icon-box {
+        text-align: center;
+
+        .icon-holder {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        i {
+            font-size: 70px;
+            color: #666;
+        }
+
+        .hl {
+            font-size: 14px;
+            font-weight: 300px;
+            font-family: Muli, sans-serif;
+            color: #555;
+        }
+
+        .hl-2 {
+            font-family: "Crimson Text", serif;
+            color: #aaa;
+            font-style: italic;
+            font-size: 21px;
         }
     }
 
