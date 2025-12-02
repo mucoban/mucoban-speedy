@@ -32,12 +32,16 @@ img { max-width: 100%; }
 
 }
 
-input {
+input, textarea {
         border-radius: 0;
-        padding: 5px 20px;
+        padding: 10px 20px;
         outline: none;
         border: 0px;
         font-family: "Crimson Text", serif;
         font-size: 18px;
         font-style: italic;
+}
+
+textarea {
+        resize: none;
 }

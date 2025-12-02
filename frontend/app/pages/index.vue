@@ -103,7 +103,7 @@
                 <div class="col-6 py-5">
                     <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
-                        <div class="medium-hl-2">TRAVEL ESSENTIALS TIPS</div>
+                        <div class="medium-hl-3">TRAVEL ESSENTIALS TIPS</div>
                         <p class="desc">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam 
                         </p>
@@ -114,7 +114,7 @@
                                 <input placeholder="E-mail" />
                             </div>
                             <div class="line-b">
-                                <textarea placeholder="Message"></textarea>
+                                <textarea placeholder="Message" rows="3"></textarea>
                                 <div class="gap-bettwen"></div>
                                 <button class="btn btn-primary cus">
                                     Send
@@ -164,6 +164,12 @@
         font-weight: 500;
     }
 
+     .medium-hl-3 {
+        color: #222;
+        font-size: 42px;
+        font-weight: 700;
+    }
+
     .desc {
         color: #666;
         font-weight: 300;
@@ -193,6 +199,7 @@
         }
         .line-b {
             display: flex;
+            align-items: flex-end;
             textarea { flex-grow: 1; }
         }
         .gap-bettwen {
