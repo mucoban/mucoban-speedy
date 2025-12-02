@@ -98,9 +98,7 @@
 
     }
 
-    .navs {
-    
-    }
+  
 
     .nav-holder {
         display: inline-block;

@@ -109,12 +109,12 @@
                         </p>
                         <div class="fast-contact-box">
                             <div class="line-a">
-                                <input />
+                                <input placeholder="Name" />
                                 <div class="gap-bettwen"></div>
-                                <input />
+                                <input placeholder="E-mail" />
                             </div>
                             <div class="line-b">
-                                <textarea />
+                                <textarea placeholder="Message"></textarea>
                                 <div class="gap-bettwen"></div>
                                 <button class="btn btn-primary cus">
                                     Send
