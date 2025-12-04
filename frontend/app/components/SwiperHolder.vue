@@ -10,19 +10,24 @@
       :spaceBetween="params?.spaceBetween"
       :autoplay="params?.autoplay"
       @swiper="onSwiper">
-        <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides" :style="{ backgroundImage: image && `url(${image})` }">
-          <div class="info-box">
-            <div class="holder">
-              <div v-if="hl1" class="hl1">{{ hl1 }}</div>
-              <div v-if="hl2" class="hl2">{{ hl2 }}</div>
-              <p v-if="desc" class="desc">{{ desc }}</p>
-              <div v-if="btn"  class="btn-holder">
-                <a class="btn"
-                  :href="btn?.link"
-                  :style="{
-                    backgroundColor: btn?.bgColor || null, 
-                    color: btn?.color 
-                  }">{{ btn?.text }} <i class="bi bi-arrow-right"></i></a>
+        <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides">
+          <div class="slide-holder" :class="{ 'image-element-mode': image.mode === 'element' }" :style="{ backgroundImage: (image.url && !image?.mode) && `url(${image.url})` }">
+            <div v-if="image.mode === 'element'" class="image-holder">
+              <img :src="image.url" />
+            </div>
+            <div class="info-box">
+              <div class="holder">
+                <div v-if="hl1" class="hl1">{{ hl1 }}</div>
+                <div v-if="hl2" class="hl2">{{ hl2 }}</div>
+                <p v-if="desc" class="desc">{{ desc }}</p>
+                <div v-if="btn"  class="btn-holder">
+                  <a class="btn"
+                    :href="btn?.link"
+                    :style="{
+                      backgroundColor: btn?.bgColor || null, 
+                      color: btn?.color 
+                    }">{{ btn?.text }} <i class="bi bi-arrow-right"></i></a>
+                </div>
               </div>
             </div>
           </div>
@@ -62,7 +67,7 @@
           hl2: String,
           desc: String,
           btn: { text: String, bgColor: String, link: String },
-          image: String
+          image: { url: String, mode: 'element' }
         }
       ]
     },
@@ -92,12 +97,28 @@
 
   .swiper { height: 100%; }
 
-  .swiper-slide {
+  .slide-holder {
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     background-position: center center;
+    height: 100%;
+
+    &.image-element-mode {
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      .info-box {
+        height: unset;
+
+        .hl1, .hl2 { color: black; }
+      }
+    }
+  }
+
+  .image-holder {
+    background-color: green;
   }
 
   .info-box {

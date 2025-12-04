@@ -12,10 +12,14 @@
                     hl1: 'LOREM IPSUM DOLOR SIT AMET', 
                     hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 
                     btn: { text: 'READ MORE', color: 'white', link: './about' },
-                    image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide1-bckg.jpg' 
+                    image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide1-bckg.jpg' }
                 },
-                { hl1: 'slide 2', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide2-bckg.jpg'},
-                { hl1: 'slide 3', image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide3-bckg.jpg'},
+                { hl1: 'slide 2', 
+                    image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide2-bckg.jpg' } 
+                },
+                { hl1: 'slide 3', 
+                    image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/11/h1-rev-slide3-bckg.jpg' } 
+                },
             ]"
             />
     </div>
@@ -78,14 +82,13 @@
                             }
                         }"
                         :slides="[
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-01-hover.png'},
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
-                            { image: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png'},
+                            { image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-01-hover.png' } },
+                            { image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png' } },
+                            { image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png' } },
+                            { image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png' } },
+                            { image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png' } },
+                            { image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png' } },
+                            { image: { url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/h1-clients-img-02-hover.png' } },
                         ]"
                         />
                 </div>
@@ -172,6 +175,62 @@
             
         </div>
     </div>
+
+    <div class="homep-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center p-5">   
+                    <div class="small-hl">Lorem ipsum dolor</div>
+                    <div class="medium-hl">FEATURED POSTS</div>
+                </div>
+                <div class="col-12  py-5">
+                    <SwiperHolder
+                        :params="{ 
+                            speed: 1000,
+                            loop: true,
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                            customNavigation: true, 
+                            // autoplay: {
+                            //     delay: 2500,
+                            //     disableOnInteraction: false,
+                            //     pauseOnMouseEnter: true
+                            // }
+                        }"
+                        :slides="[
+                            { 
+                                image: {
+                                    mode: 'element',
+                                    url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
+                                },
+                                hl1: 'LOREM IPSUM DOLOR SIT AMET', 
+                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+                            },
+                            { 
+                                image: {
+                                    mode: 'element',
+                                    url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
+                                }
+                            },
+                            { 
+                                image: {
+                                    mode: 'element',
+                                    url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
+                                }
+                            },
+                            { 
+                                image: {
+                                    mode: 'element',
+                                    url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
+                                }
+                            }
+                        ]"
+                    />
+                </div> 
+            </div>
+        </div>
+    </div>
+
 
 </template>
 
