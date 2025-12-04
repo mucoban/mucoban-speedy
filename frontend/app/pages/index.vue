@@ -264,11 +264,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &:hover {
+                i {
+                    color: #59815c;
+                    transform: scale(1.18);
+                }
+            }
         }
 
         i {
             font-size: 70px;
             color: #666;
+            transition: all 0.3s;
         }
 
         .hl {
