@@ -190,7 +190,8 @@
                             loop: true,
                             slidesPerView: 3,
                             spaceBetween: 30,
-                            customNavigation: true, 
+                            customNavigation: true,
+                            elementMode: 'info-below',
                             // autoplay: {
                             //     delay: 2500,
                             //     disableOnInteraction: false,
@@ -210,13 +211,19 @@
                                 image: {
                                     mode: 'element',
                                     url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
-                                }
+                                },
+                                hl1: 'LOREM IPSUM DOLOR SIT AMET', 
+                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+                            
                             },
                             { 
                                 image: {
                                     mode: 'element',
                                     url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
-                                }
+                                },
+                                hl1: 'LOREM IPSUM DOLOR SIT AMET', 
+                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+                            
                             },
                             { 
                                 image: {

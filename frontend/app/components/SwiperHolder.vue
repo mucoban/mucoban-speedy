@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-main-holder">
+  <div class="swiper-main-holder" :class="{ 'element-mode-info-below': params.elementMode === 'info-below' }">
     <swiper 
       v-if="slides?.length" 
       :modules="modules"
@@ -11,12 +11,16 @@
       :autoplay="params?.autoplay"
       @swiper="onSwiper">
         <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides">
-          <div class="slide-holder" :class="{ 'image-element-mode': image.mode === 'element' }" :style="{ backgroundImage: (image.url && !image?.mode) && `url(${image.url})` }">
+          <div class="slide-holder" :style="{ backgroundImage: (image.url && !image?.mode) && `url(${image.url})` }">
             <div v-if="image.mode === 'element'" class="image-holder">
               <img :src="image.url" />
             </div>
             <div class="info-box">
               <div class="holder">
+                <div v-if="1" class="detail-line">
+                  <span><i class="bi bi-calendar"></i>17.01.1990</span>
+                  <span><i class="bi bi-pencil"></i>Alisa Michaels</span>
+                </div>
                 <div v-if="hl1" class="hl1">{{ hl1 }}</div>
                 <div v-if="hl2" class="hl2">{{ hl2 }}</div>
                 <p v-if="desc" class="desc">{{ desc }}</p>
@@ -93,6 +97,58 @@
     width: 100%;
     height: 100%;
     position: relative;
+
+    &.element-mode-info-below {
+      
+      .slide-holder {
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      .info-box {
+        height: unset;
+
+        .hl1, .hl2 { color: black; }
+        
+        .hl1 {
+          font-size: 29px;
+          font-weight: 600;
+          margin: 10px 0;
+        }
+
+        .holder {
+          text-align: left;
+          padding: 0;
+        }
+
+      }
+
+      .swiper-custom-nav {
+
+        &-holder { 
+          padding: 0;
+        }
+
+        svg path {
+          fill: #c9c9c9;
+        }
+
+        &:hover {
+          svg path {
+            fill: #777;
+          }
+        }
+
+        &.prev {
+          left: -100px;
+        }
+
+        &.next {
+          left: 100px;
+        }
+      }
+
+    }
   }
 
   .swiper { height: 100%; }
@@ -104,17 +160,6 @@
     background-size: cover;
     background-position: center center;
     height: 100%;
-
-    &.image-element-mode {
-      flex-wrap: wrap;
-      align-items: flex-start;
-
-      .info-box {
-        height: unset;
-
-        .hl1, .hl2 { color: black; }
-      }
-    }
   }
 
   .image-holder {
@@ -131,6 +176,24 @@
     .holder {
       padding: 2rem;
       text-align: center;
+    }
+
+    .detail-line { 
+      margin-top: 10px;
+      
+      span {
+        font-family: "Crimson Text", serif;
+        color: #aaa;
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      & > :nth-child(1) {
+        margin-right: 20px;
+      }
+
+      i { margin-right: 5px; }
     }
 
     .hl1 {
