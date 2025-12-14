@@ -77,3 +77,21 @@ textarea {
         max-width: 400px;
         font-family: Muli,sans-serif;
 }
+
+.detail-line { 
+      margin-top: 10px;
+      
+      span {
+        font-family: "Crimson Text", serif;
+        color: #aaa;
+        font-style: italic;
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      & > :nth-child(1) {
+        margin-right: 20px;
+      }
+
+      i { margin-right: 5px; }
+}

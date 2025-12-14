@@ -178,24 +178,6 @@
       text-align: center;
     }
 
-    .detail-line { 
-      margin-top: 10px;
-      
-      span {
-        font-family: "Crimson Text", serif;
-        color: #aaa;
-        font-style: italic;
-        font-size: 18px;
-        font-weight: 300;
-      }
-
-      & > :nth-child(1) {
-        margin-right: 20px;
-      }
-
-      i { margin-right: 5px; }
-    }
-
     .hl1 {
       font-size: 55px;
       font-weight: bold;

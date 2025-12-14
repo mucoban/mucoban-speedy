@@ -53,7 +53,7 @@
             ]
         },
         { text: 'Products', url: '/products' },
-        { text: 'Blog', url: '/products' },
+        { text: 'Blog', url: '/blogs' },
         { text: 'About', url: '/about' }
     ];
 
