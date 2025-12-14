@@ -10,16 +10,16 @@
       :spaceBetween="params?.spaceBetween"
       :autoplay="params?.autoplay"
       @swiper="onSwiper">
-        <swiper-slide v-for="{ hl1, hl2, desc, btn, image } in slides">
+        <swiper-slide v-for="{ hl1, hl2, desc, btn, image, date, author } in slides">
           <div class="slide-holder" :style="{ backgroundImage: (image.url && !image?.mode) && `url(${image.url})` }">
             <div v-if="image.mode === 'element'" class="image-holder">
               <img :src="image.url" />
             </div>
             <div class="info-box">
               <div class="holder">
-                <div v-if="1" class="detail-line">
-                  <span><i class="bi bi-calendar"></i>17.01.1990</span>
-                  <span><i class="bi bi-pencil"></i>Alisa Michaels</span>
+                <div v-if="date || author" class="detail-line">
+                  <span v-if="date"><i class="bi bi-calendar"></i>{{ date }}</span>
+                  <span v-if="author"><i class="bi bi-pencil"></i>{{ author }}</span>
                 </div>
                 <div v-if="hl1" class="hl1">{{ hl1 }}</div>
                 <div v-if="hl2" class="hl2">{{ hl2 }}</div>

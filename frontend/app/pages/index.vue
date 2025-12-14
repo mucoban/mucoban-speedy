@@ -205,7 +205,9 @@
                                     url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
                                 },
                                 hl1: 'LOREM IPSUM DOLOR SIT AMET', 
-                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+                                date: '25.03.2020',
+                                author: 'Alisa Michaels'
                             },
                             { 
                                 image: {
@@ -213,7 +215,9 @@
                                     url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
                                 },
                                 hl1: 'LOREM IPSUM DOLOR SIT AMET', 
-                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+                                date: '25.03.2020',
+                                author: 'Alisa Michaels'
                             
                             },
                             { 
@@ -222,7 +226,9 @@
                                     url: 'https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg'
                                 },
                                 hl1: 'LOREM IPSUM DOLOR SIT AMET', 
-                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
+                                hl2:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+                                date: '25.03.2020',
+                                author: 'Alisa Michaels'
                             
                             },
                             { 
