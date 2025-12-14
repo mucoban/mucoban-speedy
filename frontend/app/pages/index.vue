@@ -247,7 +247,7 @@
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
     .homep-section {
         margin: 30px 0;
@@ -263,38 +263,6 @@
         &.icons {
             margin: 100px 0;
         }
-    }
-
-    .small-hl {
-        font-family: "Crimson Text", serif;
-        color: #aaa;
-        font-style: italic;
-        font-size: 21px;
-    }
-
-    .medium-hl {
-        color: #222;
-        font-size: 50px;
-        font-weight: 500;
-    }
-   
-    .medium-hl-2 {
-        color: #222;
-        font-size: 30px;
-        font-weight: 500;
-    }
-
-     .medium-hl-3 {
-        color: #222;
-        font-size: 42px;
-        font-weight: 700;
-    }
-
-    .desc {
-        color: #666;
-        font-weight: 300;
-        max-width: 400px;
-        font-family: Muli,sans-serif;
     }
 
     .text-box {

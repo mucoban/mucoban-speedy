@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header" :class="{ 'pos-init': route.path !== '/' }">
         <div class="up-line">
             <div class="container-fluid">
                 <div class="row">
@@ -41,17 +41,20 @@
 </template>
 
 <script lang="ts" setup>
+    const route = useRoute();
+    console.log('route', route);
+    
 
     const navs = [
-        { text: 'Home', url: './', 
+        { text: 'Home', url: '/', 
             subnavs: [
                 { text: 'Sn Home 1', url: './about' },
                 { text: 'Sn Home 2', url: './' }
             ]
         },
-        { text: 'Products', url: './products' },
-        { text: 'Blog', url: './products' },
-        { text: 'About', url: './about' }
+        { text: 'Products', url: '/products' },
+        { text: 'Blog', url: '/products' },
+        { text: 'About', url: '/about' }
     ];
 
     const navsA = navs.slice(0, navs.length / 2);
@@ -94,6 +97,11 @@
             border: 0px solid white;
             border-bottom-width: 1px;
             padding: 10px 10px;
+        }
+
+        &.pos-init {
+            background-color: #969696;
+            position: initial;
         }
 
     }

@@ -91,7 +91,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
   .swiper-main-holder {
     width: 100%;
