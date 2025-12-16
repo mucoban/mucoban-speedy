@@ -54,7 +54,7 @@
         },
         { text: 'Products', url: '/products' },
         { text: 'Blog', url: '/blogs' },
-        { text: 'About', url: '/about' }
+        { text: 'Contact', url: '/contact' }
     ];
 
     const navsA = navs.slice(0, navs.length / 2);
