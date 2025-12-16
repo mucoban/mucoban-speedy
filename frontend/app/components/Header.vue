@@ -104,6 +104,10 @@
             position: initial;
         }
 
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+
     }
 
   
