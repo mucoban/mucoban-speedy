@@ -42,7 +42,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 py-5">
+                <div class="col-12 col-md-6 pb-5">
                     <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-01.jpg" />
                 </div>
                 <div class="col-12 col-md-6">
@@ -73,12 +73,22 @@
                         :params="{ 
                             speed: 1000,
                             loop: true,
-                            slidesPerView: 7,
-                            spaceBetween: 30,
+                            slidesPerView: 2,
+                            spaceBetween: 20,
                             autoplay: {
                                 delay: 2500,
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: true
+                            },
+                            breakpoints: {
+                                576: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30
+                                },
+                                768: {
+                                    slidesPerView: 7,
+                                    spaceBetween: 30
+                                }
                             }
                         }"
                         :slides="[

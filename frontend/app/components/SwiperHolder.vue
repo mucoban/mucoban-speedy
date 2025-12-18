@@ -9,6 +9,7 @@
       :slidesPerView="params?.slidesPerView"
       :spaceBetween="params?.spaceBetween"
       :autoplay="params?.autoplay"
+      :breakpoints="params?.breakpoints"
       @swiper="onSwiper">
         <swiper-slide v-for="{ hl1, hl2, desc, btn, image, date, author } in slides">
           <div class="slide-holder" :style="{ backgroundImage: (image.url && !image?.mode) && `url(${image.url})` }">
