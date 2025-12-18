@@ -33,7 +33,7 @@
                     <div class="small-hl">Lorem ipsum dolor</div>
                     <div class="medium-hl">TRAVEL ESSENTIALS TIPS</div>
                 </div>
-                <div class="col-6  py-5">
+                <div class="col-12 col-md-6  py-5">
                     <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
                         <div class="medium-hl-2">TRAVEL ESSENTIALS TIPS</div>
@@ -42,13 +42,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6 py-5">
                     <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-01.jpg" />
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-01.jpg" />
                 </div>
-                <div class="col-6 py-5">
+                <div class="col-12 col-md-6 py-5">
                     <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
                         <div class="medium-hl-2">TRAVEL ESSENTIALS TIPS</div>
@@ -277,6 +277,10 @@
         margin-top: -100px;
         position: relative;
         z-index: 1;
+
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
     }
 
     .fast-contact-box {
