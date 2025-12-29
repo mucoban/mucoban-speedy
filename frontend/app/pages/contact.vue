@@ -66,10 +66,20 @@
             &.c {
                 justify-content: flex-end;
             }
+
+            @media screen and (max-width: 767px) {
+                flex-wrap: wrap;
+            }
+            
         }
 
         .gap-bettwen {
             width: 10px;
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                height: 10px;
+            }
         }
 
         input, textarea { 

@@ -27,9 +27,15 @@
         max-width: unset;
 
         img {
-            max-width: 500px;
+            max-width: 100%;
+            width: 500px;
             float: right;
             margin-left: 20px;
+
+            @media screen and (max-width: 767px) {
+                margin-left: 0px;
+                margin-bottom: 15px;
+            }
         }
     }
 </style>
