@@ -1,5 +1,5 @@
 <template>
-    <div class="header" :class="{ 'pos-init': route.path !== '/' }">
+    <div class="header" :class="{ 'pos-init': route.path !== '/',  'mobile-menu-on': mobileMenuOn }">
         <div class="up-line">
             <div class="container-fluid">
                 <div class="row">
@@ -25,6 +25,16 @@
         </div>    
 
         <div class="middle-line">
+
+            <a href="./" class="header-mobil-logo">
+                <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2020/01/logo-img-03.png" />
+            </a>
+
+            <div class="burger" @click="setMobileMenuOn()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="navs">
 
                 <Navs :navs="navsA" />
@@ -42,8 +52,6 @@
 
 <script lang="ts" setup>
     const route = useRoute();
-    console.log('route', route);
-    
 
     const navs = [
         { text: 'Home', url: '/', 
@@ -59,6 +67,16 @@
 
     const navsA = navs.slice(0, navs.length / 2);
     const navsB = navs.slice(navs.length / 2);
+
+    const mobileMenuOn = ref(false);
+
+    const setMobileMenuOn = () => {
+        mobileMenuOn.value = true;
+    }
+
+    const setMobileMenuOff = () => {
+        mobileMenuOn.value = false;
+    }
 
 </script>
 
@@ -97,6 +115,11 @@
             border: 0px solid white;
             border-bottom-width: 1px;
             padding: 10px 10px;
+
+            @media screen and (max-width: 992px) {
+                justify-content: space-between;
+                align-items: center;
+            }
         }
 
         &.pos-init {
@@ -104,13 +127,29 @@
             position: initial;
         }
 
-        @media screen and (max-width: 992px) {
-            display: none;
-        }
-
     }
 
-  
+    .navs {
+
+        @at-root .header.mobile-menu-on & {
+            transform: translateX(0%);
+        }
+
+        @media screen and (max-width: 992px) {
+            position: fixed;
+            background: wheat;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transition: all .6s;
+        }
+    }
 
     .nav-holder {
         display: inline-block;
@@ -129,6 +168,10 @@
                     background-color: #59815c;
                 }
             }
+
+        @media screen and (max-width: 992px) {
+            margin-bottom: 25px;
+        }
     }
 
     .contact-btn {
@@ -140,6 +183,10 @@
     .header-logo {
         display: inline-block;
         width: 150px;
+
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
     }
 
     .sub-navs {
@@ -174,6 +221,38 @@
             &:hover {
                 text-decoration: underline !important;
             }
+        }
+    }
+
+    .burger {
+        display: none;
+        width: 60px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all .2s;
+
+        span {
+            display: block;
+            background-color: white;
+            height: 5px;
+            margin-bottom: 10px;
+        }
+
+        @at-root .header.mobile-menu-on & {
+            transform: translateX(-30px);
+        }
+
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    .header-mobil-logo {
+        display: none;
+        width: 150px;
+
+        @media screen and (max-width: 992px) {
+            display: block;
         }
     }
     
