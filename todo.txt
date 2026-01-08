@@ -1,7 +1,11 @@
 
+ongoing:
+    - commit mobilmenu changes
+
 Todo:
     - Correct home page slider
     - Font change
+    - responsive mixins https://medium.com/@jainbhavukspeaks/leveraging-scss-mixins-to-create-responsive-layouts-the-easy-way-5bbe4080cb15
 
 
 

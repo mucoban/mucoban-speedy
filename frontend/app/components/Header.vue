@@ -37,6 +37,10 @@
             </div>
             <div class="navs">
 
+                <div class="mm-close-btn" @click="setMobileMenuOff()">
+                    <i class="bi bi-x-square-fill"></i>
+                </div>
+
                 <Navs :navs="navsA" />
 
                 <a href="./" class="header-logo">
@@ -60,7 +64,10 @@
                 { text: 'Sn Home 2', url: './' }
             ]
         },
-        { text: 'Products', url: '/products' },
+        { text: 'Products', url: '/products',subnavs: [
+                { text: 'Sn Home 1', url: './about' },
+                { text: 'Sn Home 2', url: './' }
+            ] },
         { text: 'Blog', url: '/blogs' },
         { text: 'Contact', url: '/contact' }
     ];
@@ -80,7 +87,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .header {
         position: absolute;
         z-index: 100;
@@ -131,13 +138,25 @@
 
     .navs {
 
+        .mm-close-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            cursor: pointer;
+            
+            i {
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+
         @at-root .header.mobile-menu-on & {
             transform: translateX(0%);
         }
 
         @media screen and (max-width: 992px) {
             position: fixed;
-            background: wheat;
+            background: #484642;
             width: 100%;
             height: 100vh;
             top: 0;
@@ -148,29 +167,6 @@
             align-items: center;
             transform: translateX(100%);
             transition: all .6s;
-        }
-    }
-
-    .nav-holder {
-        display: inline-block;
-        position: relative;
-        padding: 0 50px;
-
-        & > a {
-                color: white !important; 
-                cursor: pointer;
-                text-transform: uppercase;
-                font-weight: 500;
-                transition: all .3s;
-                padding: 5px 15px;
-
-                &:hover {
-                    background-color: #59815c;
-                }
-            }
-
-        @media screen and (max-width: 992px) {
-            margin-bottom: 25px;
         }
     }
 
@@ -186,41 +182,6 @@
 
         @media screen and (max-width: 992px) {
             display: none;
-        }
-    }
-
-    .sub-navs {
-        position: absolute;
-        top: 68px; left: 45px;
-        overflow: hidden;
-
-        &.on {
-            .sub-navs-i-holder {
-                transform: translate(0%, 0%);
-            }
-        }
-    }
-
-    .sub-navs-i-holder {
-        background-color: white;
-        min-width: 200px;
-        transform: translate(0%, -100%);
-        transition: all .3s ease-in;
-    }
-
-    .sub-nav-holder {
-        a {
-            padding: 10px 20px;
-            white-space: nowrap;
-            color: #333;
-            font-weight: 300;
-            font-style: italic;
-            display: inline-block;
-            transition: all .3s;
-
-            &:hover {
-                text-decoration: underline !important;
-            }
         }
     }
 
@@ -250,6 +211,14 @@
     .header-mobil-logo {
         display: none;
         width: 150px;
+
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
+    }
+
+    .mm-close-btn {
+        display: none;
 
         @media screen and (max-width: 992px) {
             display: block;
