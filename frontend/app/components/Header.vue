@@ -41,13 +41,13 @@
                     <i class="bi bi-x-square-fill"></i>
                 </div>
 
-                <Navs :navs="navsA" />
+                <Navs :navs="navsA" @nav-clicked="setMobileMenuOff" />
 
                 <a href="./" class="header-logo">
                     <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2020/01/logo-img-03.png" />
                 </a>
 
-                <Navs :navs="navsB" />
+                <Navs :navs="navsB" @nav-clicked="setMobileMenuOff" />
                 
             </div>
         </div>           

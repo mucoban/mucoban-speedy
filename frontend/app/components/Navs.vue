@@ -26,6 +26,7 @@
 
 <script lang="ts" setup>
     const { navs } = defineProps([ 'navs' ]);
+    const emit = defineEmits([ 'navClicked' ]);
     
     let timerOffSubNavs: any = {};
 
@@ -50,6 +51,10 @@
             setTimeout(() => {
                 if (nsClassList) nsClassList.remove('on');
             }, 500);
+    }
+
+    const navClicked = () => {
+        emit('navClicked');
     }
     
 </script>
