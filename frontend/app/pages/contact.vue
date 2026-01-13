@@ -36,7 +36,9 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+    @import "/assets/css/_variables";
+    
     .main-holder {
         margin-bottom: 50px;
     }
@@ -67,7 +69,7 @@
                 justify-content: flex-end;
             }
 
-            @media screen and (max-width: 767px) {
+            @include responsive('medium') {
                 flex-wrap: wrap;
             }
             
@@ -76,7 +78,7 @@
         .gap-bettwen {
             width: 10px;
 
-            @media screen and (max-width: 767px) {
+            @include responsive('medium') {
                 width: 100%;
                 height: 10px;
             }

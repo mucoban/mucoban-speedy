@@ -1,0 +1,25 @@
+/*
+* Variables for breakpoints
+*/
+$mobile-landscape: 568px;
+$tablet: 768px;
+$desktop: 992px;
+
+/*
+* Map for breakpoints
+*/
+$breakpoints: (
+  "small": $mobile-landscape,
+  "medium": $tablet,
+  "large": $desktop
+);
+
+@mixin responsive($size) {
+
+        $breakpoint: map-get($breakpoints, $size);
+        $breakpoint2: $tablet;
+
+        @media screen and (max-width: $breakpoint) {
+                @content;
+        }
+}

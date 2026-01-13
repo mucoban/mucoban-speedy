@@ -14,7 +14,10 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+    @import "/assets/css/_variables";
+
     .main-holder {
         margin-bottom: 50px;
     }
@@ -32,7 +35,7 @@
             float: right;
             margin-left: 20px;
 
-            @media screen and (max-width: 767px) {
+            @include responsive('medium') {
                 margin-left: 0px;
                 margin-bottom: 15px;
             }

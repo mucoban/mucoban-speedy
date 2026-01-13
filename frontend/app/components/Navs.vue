@@ -59,7 +59,9 @@
     
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+    @import "/assets/css/_variables";
 
     .nav-holder {
         display: inline-block;
@@ -79,7 +81,7 @@
                     background-color: #59815c;
                 }
 
-                @media screen and (max-width: 992px) {
+                @include responsive('large') {
                     padding: 5px 0px;
                 }
             }
@@ -92,12 +94,12 @@
             padding: 0px;
             margin-left: 7px;
 
-            @media screen and (max-width: 992px) {
+            @include responsive('large') {
                 display: inline-block;
             }
         }
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             margin-bottom: 25px;
         }
     }
@@ -116,7 +118,7 @@
             }
         }
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             position: static;
 
             &.on {
@@ -133,7 +135,7 @@
         transform: translate(0%, -100%);
         transition: all .3s ease-in;
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             transition: none;
             transform: translate(0%, 0%);
             display: none;

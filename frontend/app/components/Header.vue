@@ -88,6 +88,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @import "/assets/css/_variables";
+
     .header {
         position: absolute;
         z-index: 100;
@@ -123,7 +125,7 @@
             border-bottom-width: 1px;
             padding: 10px 10px;
 
-            @media screen and (max-width: 992px) {
+            @include responsive('large') {
                 justify-content: space-between;
                 align-items: center;
             }
@@ -154,7 +156,7 @@
             transform: translateX(0%);
         }
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             position: fixed;
             background: #484642;
             width: 100%;
@@ -180,7 +182,7 @@
         display: inline-block;
         width: 150px;
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             display: none;
         }
     }
@@ -203,7 +205,7 @@
             transform: translateX(-30px);
         }
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             display: block;
         }
     }
@@ -212,7 +214,7 @@
         display: none;
         width: 150px;
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             display: block;
         }
     }
@@ -220,7 +222,7 @@
     .mm-close-btn {
         display: none;
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             display: block;
         }
     }

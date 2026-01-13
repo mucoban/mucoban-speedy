@@ -259,6 +259,9 @@
 
 <style lang="scss" scoped>
 
+    @import "/assets/css/_variables";
+
+
     .homep-section {
         margin: 30px 0;
 
@@ -288,7 +291,7 @@
         position: relative;
         z-index: 1;
 
-        @media screen and (max-width: 992px) {
+        @include responsive('large') {
             display: none;
         }
     }
