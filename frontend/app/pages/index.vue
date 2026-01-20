@@ -33,7 +33,7 @@
                     <div class="small-hl">Lorem ipsum dolor</div>
                     <div class="medium-hl">TRAVEL ESSENTIALS TIPS</div>
                 </div>
-                <div class="col-12 col-md-6  py-5">
+                <div class="col-12 col-md-6 py-5">
                     <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
                         <div class="medium-hl-2">TRAVEL ESSENTIALS TIPS</div>
@@ -110,10 +110,10 @@
     <div class="homep-section fragmented">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="ccol-12 col-md-6">
                     <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/h1-img-01.png" />
                 </div>
-                <div class="col-6 py-5">
+                <div class="col-12 col-md-6 py-5">
                     <div class="text-box">
                         <div class="small-hl ">Lorem ipsum dolor</div>
                         <div class="medium-hl-3">TRAVEL ESSENTIALS TIPS</div>
@@ -145,7 +145,7 @@
     <div class="homep-section icons">
         <div class="container">
             <div class="row">
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="icon-box">
                         <div class="icon-holder">
                             <i class="bi bi-airplane-engines-fill"></i>
@@ -154,7 +154,7 @@
                         <div class="hl-2">Anında açılır</div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="icon-box">
                         <div class="icon-holder">
                             <i class="bi bi-arrows-angle-contract"></i>
@@ -163,7 +163,7 @@
                         <div class="hl-2">Anında açılır</div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="icon-box">
                         <div class="icon-holder">
                             <i class="bi bi-aspect-ratio"></i>
@@ -172,7 +172,7 @@
                         <div class="hl-2">Anında açılır</div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-md-3">
                     <div class="icon-box">
                         <div class="icon-holder">
                             <i class="bi bi-award"></i>
@@ -198,10 +198,15 @@
                         :params="{ 
                             speed: 1000,
                             loop: true,
-                            slidesPerView: 3,
+                            slidesPerView: 2,
                             spaceBetween: 30,
                             customNavigation: true,
                             elementMode: 'info-below',
+                            breakpoints: {
+                                576: {
+                                    slidesPerView: 3
+                                }
+                            },
                             // autoplay: {
                             //     delay: 2500,
                             //     disableOnInteraction: false,
@@ -280,6 +285,10 @@
 
     .text-box {
         padding: 0 50px;
+
+        @include responsive('large') {
+            padding: 0 20px;
+        }
     }
 
     .main-swiper-section {
@@ -300,16 +309,47 @@
         .line-a {
             display: flex;
             margin-bottom: 10px;
-            input { flex-grow: 1; }
+            
+            @include responsive('medium') {
+               flex-wrap: wrap;
+            }
+
+            input { 
+                flex-grow: 1;
+                
+                @include responsive('medium') {
+                   &:first-child {
+                        margin-bottom: 10px;
+                   }
+                }
+            }
         }
         .line-b {
             display: flex;
             align-items: flex-end;
-            textarea { flex-grow: 1; }
+            
+            @include responsive('medium') {
+                flex-wrap: wrap;
+                justify-content: end;
+            }
+
+            textarea { 
+                flex-grow: 1;
+
+                @include responsive('medium') {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
         }
         .gap-bettwen {
             display: inline-block;
             width: 20px;
+            flex-shrink: 0;
+
+            @include responsive('medium') {
+                display: none;
+            }
         }
     }
 

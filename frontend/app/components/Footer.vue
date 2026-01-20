@@ -3,7 +3,7 @@
         <div class="up-line">
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-12 col-md-3">
                         <a href="./" class="bottom-logo">
                             <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/12/logo-footer.png" alt="">
                         </a>
@@ -12,7 +12,7 @@
                             <div class="text">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eiusmod mas.</div>
                         </div>
                     </div>
-                    <div class="col-9 mb-4">
+                    <div class="col-9 col-md-9 mb-4">
                         <p class="remark">
                             Based in Utah, USA, Wanderland is a blog by Markus Thompson. His posts
                             explore outdoor experiences through photos and diaries with tips & tricks.
@@ -58,6 +58,8 @@
 </template>
 
 <style lang="scss">
+    @import "/assets/css/_variables";
+    
     .footer {
         background-color: rgb(59, 59, 59);
         color: white;
@@ -66,6 +68,10 @@
 
         .up-line {
             padding: 50px;
+
+            @include responsive('small') {
+                padding: 20px;
+            }
         }
 
         .bottom-line {
@@ -88,9 +94,19 @@
         .bottom-lists {
             display: flex;
             justify-content: space-between;
+
+            @include responsive('medium') {
+                flex-wrap: wrap;
+            }
         }
 
         .bottom-list {
+            
+            @include responsive('medium') {
+                margin-top: 25px;
+                margin-right: 20px;
+            }
+
             .hl {
                 font-size: 20px;
                 font-weight: bold;

@@ -93,6 +93,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "/assets/css/_variables";
 
   .swiper-main-holder {
     width: 100%;
@@ -174,6 +175,10 @@
     width: 100%;
     height: 100%;
 
+    @include responsive('medium') {
+          align-items: end;
+    }
+
     .holder {
       padding: 2rem;
       text-align: center;
@@ -184,6 +189,10 @@
       font-weight: bold;
       color: white;
       margin-bottom: 1rem;
+
+      @include responsive('medium') {
+        font-size: 20px;
+      }
     }
 
     .hl2 {
@@ -231,6 +240,10 @@
     align-items: center;
     padding: 0 50px;
     pointer-events: none;
+
+    @include responsive('medium') {
+      display: none;
+    }
   }
 
   .swiper-custom-nav {

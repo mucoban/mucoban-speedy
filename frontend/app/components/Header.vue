@@ -115,6 +115,14 @@
                     color: #fff; 
                 }
             }
+
+
+            @include responsive('small') {
+                & .row .col:first-child {
+                    display: none;
+                }
+            }
+            
         }
 
         .middle-line {

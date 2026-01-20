@@ -1,6 +1,5 @@
 
 ongoing:
-    - commit mobilmenu changes
 
 Todo:
     - Correct home page slider
@@ -12,4 +11,7 @@ Todo:
 
 backedn run:
 node --env-file=.env server.js
+
+done:
+    - make homepage responsive
 
