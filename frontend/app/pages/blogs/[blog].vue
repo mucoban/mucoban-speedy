@@ -28,7 +28,7 @@
 
     .image-holder {
         img {
-            max-width: 1000px;
+            width: 1000px;
         }
     }
 

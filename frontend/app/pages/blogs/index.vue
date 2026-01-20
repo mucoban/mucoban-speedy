@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="medium-hl">BLOG</div>
             </div>
-            <div v-for="num in [0,1,2,3,4]" class="col-4">
+            <div v-for="num in [0,1,2,3,4]" class="col-6 col-md-4">
                 <div class="main-holder">
                     <div class="image-holder">
                         <img src="https://wanderland.qodeinteractive.com/wp-content/uploads/2019/10/blog-post-img-04.jpg" />
