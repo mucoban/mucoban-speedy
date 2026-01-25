@@ -7,6 +7,8 @@
 dist
 db-data
 backend/public
+server/public/*
+server/mysql-data/
 frontend/node-compile-cache
 
 # Node dependencies

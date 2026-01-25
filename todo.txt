@@ -1,5 +1,6 @@
 
 ongoing:
+    - setup and push php server 
 
 Todo:
     - Correct home page slider
