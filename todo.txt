@@ -1,6 +1,8 @@
 
 ongoing:
-    - setup and push php server 
+    - try to deploy to a node server with mysql database
+    - start coding the panel
+    https://youtu.be/SSLhGanxmCg?si=yn2KVYsYDzpJGxkI
 
 Todo:
     - Correct home page slider
@@ -15,4 +17,6 @@ node --env-file=.env server.js
 
 done:
     - make homepage responsive
+    - try to deploy to a node server with fakestoreapi
+
 

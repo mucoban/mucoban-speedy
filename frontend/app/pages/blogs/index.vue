@@ -49,3 +49,27 @@
         }
     }
 </style>
+
+<script setup lang="ts">
+
+const { data, status, error, refresh, clear } = await useFetch('http://localhost:3000/test.json');
+
+const t0 = (data.value as any)[0].title;
+
+
+//useSeoHead
+// useHead({
+//   title: () => t0,
+//   meta: [
+//     { name: 'description', content: 'My amazing site.' },
+//   ]
+// })
+
+useSeoMeta({
+  title: t0,
+  ogTitle: t0,
+  description: t0,
+  ogDescription: t0,
+  twitterCard: 'summary_large_image',
+})
+</script>
