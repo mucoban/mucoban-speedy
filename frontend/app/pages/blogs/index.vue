@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 
-const { data, status, error, refresh, clear } = await useFetch('http://localhost:3000/test.json');
+const { data, status, error, refresh, clear } = await useFetch('http://209.38.205.132:3000/test.json');
 
 const t0 = (data.value as any)[0].title;
 
