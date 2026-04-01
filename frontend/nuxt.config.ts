@@ -7,5 +7,10 @@ export default defineNuxtConfig({
     'bootstrap/dist/css/bootstrap.min.css',
     'bootstrap-icons/font/bootstrap-icons.css',
     '~/assets/css/main.scss'
-  ]
+  ],
+  runtimeConfig: {
+    public: {
+      api: process.env.API
+    }
+  }
 })

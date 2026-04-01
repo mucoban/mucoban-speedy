@@ -1,22 +1,68 @@
 
-ongoing:
-    - try to deploy to a node server with mysql database
-    - start coding the panel
-    https://youtu.be/SSLhGanxmCg?si=yn2KVYsYDzpJGxkI
+ONGOING:
 
-Todo:
-    - Correct home page slider
-    - Font change
-    - responsive mixins https://medium.com/@jainbhavukspeaks/leveraging-scss-mixins-to-create-responsive-layouts-the-easy-way-5bbe4080cb15
+TODO:
 
-
-
-
-backedn run:
-node --env-file=.env server.js
-
-done:
+DONE:
+    - fetch and apply seo data to main site
+    
+    - create a seo data table DONE / and return on api / import server db to local
     - make homepage responsive
     - try to deploy to a node server with fakestoreapi
 
+
+DOCS:
+certificate renewal
+sudo certbot renew --dry-run
+https://youtu.be/SSLhGanxmCg?si=yn2KVYsYDzpJGxkI 6:45
+
+secure phpmyadmin done https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-with-nginx-on-an-ubuntu-20-04-server#step-5-setting-up-access-via-encrypted-tunnels
+
+php nginx installation
+wordpress_site https://www.digitalocean.com/community/tutorials/php-fpm-nginx
+
+
+
+
+
+COMMANDS:
+
+
+sudo service apache2 stop
+sudo systemctl stop nginx
+
+sudo service nginx restart
+nano /etc/nginx/sites-available/default
+sudo certbot --nginx
+
+ssh-add -l  
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/do
+
+ssh root@209.38.205.132
+
+
+node --env-file=.env server.js
+
+
+
+
+server {
+        listen 80;
+        listen [::]:80;
+        
+        root /var/www/html;
+
+        server_name mucoban.space www.mucoban.space;
+
+        location / {
+                proxy_pass http://localhost:3000;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_cache_bypass $http_upgrade;
+        }
+}
 

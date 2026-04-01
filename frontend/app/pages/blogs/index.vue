@@ -51,25 +51,31 @@
 </style>
 
 <script setup lang="ts">
+const config = useRuntimeConfig();
 
-const { data, status, error, refresh, clear } = await useFetch('http://209.38.205.132:3000/test.json');
+const { data: fetchedSeoData } = await useFetch(`${config.public.api}seo-data`);
 
-const t0 = (data.value as any)[0].title;
+const seoData = (fetchedSeoData as any)?.value?.find((d: any) => d.page_name === 'general')?.data?.en;
 
+const seoMeta: any = {};
 
-//useSeoHead
-// useHead({
-//   title: () => t0,
-//   meta: [
-//     { name: 'description', content: 'My amazing site.' },
-//   ]
-// })
+if (seoData) {
+    if (seoData.title) {
+        seoMeta.title = seoData.title;
+        seoMeta.ogTitle = seoData.title;
+    }
+    
+    if (seoData.description) {
+        seoMeta.description = seoData.description;
+        seoMeta.ogDescription = seoData.description;
+    }
 
-useSeoMeta({
-  title: t0,
-  ogTitle: t0,
-  description: t0,
-  ogDescription: t0,
-  twitterCard: 'summary_large_image',
-})
+    if (seoData.image) {
+        seoMeta.ogImage = seoData.image;
+        seoMeta.twitterCard = 'summary_large_image';
+    }
+}
+
+useSeoMeta(seoMeta);
+
 </script>
