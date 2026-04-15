@@ -61,7 +61,7 @@
 
 <style lang="scss" scoped>
 
-    @import "/assets/css/_variables";
+    @use "/assets/css/_variables" as *;
 
     .nav-holder {
         display: inline-block;

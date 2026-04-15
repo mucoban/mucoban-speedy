@@ -1,11 +1,12 @@
 
 ONGOING:
+   - start / panel and multi linguality of the site
 
 TODO:
 
 DONE:
+    - build main site on server
     - fetch and apply seo data to main site
-    
     - create a seo data table DONE / and return on api / import server db to local
     - make homepage responsive
     - try to deploy to a node server with fakestoreapi
@@ -20,6 +21,9 @@ secure phpmyadmin done https://www.digitalocean.com/community/tutorials/how-to-i
 
 php nginx installation
 wordpress_site https://www.digitalocean.com/community/tutorials/php-fpm-nginx
+
+pm2 cheat sheet
+https://devhints.io/pm2
 
 
 
@@ -44,6 +48,8 @@ ssh root@209.38.205.132
 
 
 node --env-file=.env server.js
+
+sudo chown -R username folder
 
 
 

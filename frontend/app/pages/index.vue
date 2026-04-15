@@ -264,8 +264,8 @@
 
 <style lang="scss" scoped>
 
-    @import "/assets/css/_variables";
-
+    @use "/assets/css/_variables" as *;
+    
 
     .homep-section {
         margin: 30px 0;

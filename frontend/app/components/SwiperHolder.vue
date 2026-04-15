@@ -93,7 +93,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "/assets/css/_variables";
+  @use "/assets/css/_variables" as *;
 
   .swiper-main-holder {
     width: 100%;

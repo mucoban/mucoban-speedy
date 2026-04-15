@@ -16,7 +16,7 @@
 
 <style lang="scss" scoped>
 
-    @import "/assets/css/_variables";
+    @use "/assets/css/_variables" as *;
 
     .main-holder {
         margin-bottom: 50px;

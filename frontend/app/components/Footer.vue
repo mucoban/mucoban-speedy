@@ -58,7 +58,7 @@
 </template>
 
 <style lang="scss">
-    @import "/assets/css/_variables";
+    @use "/assets/css/_variables" as *;
     
     .footer {
         background-color: rgb(59, 59, 59);

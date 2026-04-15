@@ -88,7 +88,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "/assets/css/_variables";
+    @use "/assets/css/_variables" as *;
 
     .header {
         position: absolute;
